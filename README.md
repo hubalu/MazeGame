@@ -1,7 +1,7 @@
 # MazeGame
 Hi! Here is a maze game written by Rui Ge and Bihao Xu together. We are currently MS in Computer Science students from the University of Chicago.
 
-To start the game, please run the core/byog/main.java. 
+To start the game, please run the byog/Core/Main.java. 
 When the user interface has appeared, type in a random number as the seed, then type "s",and the maze will be presented.
 The sight of player is limited, and your goal is to find the locked door and leave the maze through it.
 If you feel it too difficult, press "t" on the keyboard to see what will happen!
