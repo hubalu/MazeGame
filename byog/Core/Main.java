@@ -2,9 +2,15 @@ package byog.Core;
 
 import byog.TileEngine.TETile;
 
-/** This is the main entry point for the program. This class simply parses
- *  the command line inputs, and lets the byog.Core.Game class take over
- *  in either keyboard or input string mode.
+/** This is the main entry point for the game.
+ *  Start the program and type in a random number as the seed, then type "s",and the maze will be presented.
+ *  The sight of player is limited, and your goal is to find the locked door and leave the maze through it.
+ *  If you feel it too difficult, press "t" on the keyboard to see what will happen!
+ *  Whenever you pass a blue light, the light will turn off and you receive one score.
+ *  Whenever you want to quit and save the game, just type ":q" and choose to "load" the next time you start the game.
+ *  Hope you enjoy our game!
+ *
+ *  @author Rui Ge & Bihao Xu
  */
 public class Main {
     public static void main(String[] args) {
