@@ -10,4 +10,4 @@ Whenever you pass a blue light, the light will turn off and you receive one scor
 Whenever you want to quit and save the game, just type ":q" and choose to "load" the next time you start the game.
 Hope you enjoy our game!
 
-![StartPage](https://https://github.com/hubalu/MazeGame/blob/master/image/1.png?raw=true)
+![image]https://github.com/hubalu/MazeGame/blob/master/image/1.png
