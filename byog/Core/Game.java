@@ -1,6 +1,5 @@
 package byog.Core;
 
-import byog.TileEngine.TERenderer;
 import byog.TileEngine.TETile;
 import byog.TileEngine.Tileset;
 import edu.princeton.cs.introcs.StdDraw;
@@ -28,6 +27,7 @@ public class Game {
         initializeCanvasConfig(WIDTH, HEIGHT);
         createStartPageCanvas();
         onStartPage();
+        instructionPage();
 
         initializeGameConfig();
         onMainGame();
@@ -56,7 +56,7 @@ public class Game {
         int numYTiles = world[0].length;
         StdDraw.clear(new Color(0, 0, 0));
         displayGameScoreOnTopMid();
-        displayTileNameOnTopLeft();
+        displayTileNameOnTopLeft(world);
         for (int x = 0; x < numXTiles; x += 1) {
             for (int y = 0; y < numYTiles; y += 1) {
                 if (world[x][y] == null) {
@@ -112,6 +112,29 @@ public class Game {
             }
         }
     }
+    private void instructionPage(){
+        Font font = new Font("Monaco", Font.BOLD, 18);
+        StdDraw.setFont(font);
+        while(true){
+            StdDraw.clear(Color.BLACK);
+            StdDraw.text((double) WIDTH / 2, (double) HEIGHT /2+4,
+                    "To control the snowman(player), please use 'w','a','s','d' keys");
+            StdDraw.text((double) WIDTH / 2, (double) HEIGHT /2+2, "Try your best to leave the maze through the door");
+            StdDraw.text((double) WIDTH / 2, (double) HEIGHT /2,
+                    "If you feel the game too difficult, press the 't' to see what will happen!");
+            StdDraw.text((double) WIDTH / 2, (double) HEIGHT /2-2,
+                    "When you want to quit and save your game progress, press \":q\" and load game next time");
+            StdDraw.text((double) WIDTH / 2, (double) HEIGHT /2-4,
+                    "Once you understand the instruction, press 's' to start the game");
+            StdDraw.show();
+            if (StdDraw.hasNextKeyTyped()) {
+                char key = StdDraw.nextKeyTyped();
+                if(key=='s'){
+                    break;
+                }
+            }
+        }
+    }
     /**
      * execute the action on end page
      */
@@ -133,7 +156,14 @@ public class Game {
      */
     private void createStartPageCanvas() {
         setInformationCanvasTextConfig();
-        StdDraw.text((double) WIDTH / 2, (double) HEIGHT * 4 / 5, "CS61B: THE GAME");
+        Font font = new Font("Monaco", Font.BOLD, 40);
+        StdDraw.setFont(font);
+        StdDraw.text((double) WIDTH / 2, (double) HEIGHT * 4 / 5, "MAZE GAME");
+        font = new Font("Monaco", Font.BOLD, 25);
+        StdDraw.setFont(font);
+        StdDraw.text((double) WIDTH / 2, (double) HEIGHT * 4 / 5-4, "Author: Bihao Xu & Rui Ge");
+        font = new Font("Monaco", Font.BOLD, 30);
+        StdDraw.setFont(font);
         StdDraw.text((double) WIDTH / 2, (double) HEIGHT / 2, "NEW GAME (N)");
         StdDraw.text((double) WIDTH / 2, (double) HEIGHT / 2 - 3, "LOAD GAME (L)");
         StdDraw.text((double) WIDTH / 2, (double) HEIGHT / 2 - 6, "QUIT (Q)");
@@ -371,7 +401,7 @@ public class Game {
      * when mouse click on the Tile show the Tile name
      * @param
      */
-    private void displayTileNameOnTopLeft() {
+    private void displayTileNameOnTopLeft(TETile[][] world) {
         double mouseX = StdDraw.mouseX();
         double mouseY = StdDraw.mouseY();
         int x = (int) mouseX;

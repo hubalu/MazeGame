@@ -11,6 +11,7 @@ import byog.TileEngine.TETile;
  *  Hope you enjoy our game!
  *
  *  @author Rui Ge & Bihao Xu
+ *  @source University of California, Berkley CS61B class
  */
 public class Main {
     public static void main(String[] args) {

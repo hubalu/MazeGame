@@ -1,5 +1,6 @@
 # MazeGame
-Hi! Here is a maze game written by Rui Ge and Bihao Xu together. We are currently MS in Computer Science students from the University of Chicago.
+Hi! Here is a maze game written by Rui Ge and Bihao Xu together, driven from CS61B course at the University of California, Berkeley. 
+We are currently MS in Computer Science students from the University of Chicago.
 
 To start the game, please run the byog/Core/Main.java. 
 When the user interface has appeared, type in a random number as the seed, then type "s",and the maze will be presented.
