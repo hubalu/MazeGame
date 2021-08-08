@@ -11,3 +11,8 @@ Whenever you want to quit and save the game, just type ":q" and choose to "load"
 Hope you enjoy our game!
 
 ![Start page](https://github.com/hubalu/MazeGame/blob/master/image/1.png)
+![Instruction page](https://github.com/hubalu/MazeGame/blob/master/image/2.png)
+![game page 1](https://github.com/hubalu/MazeGame/blob/master/image/3.png)
+![game page 2](https://github.com/hubalu/MazeGame/blob/master/image/4.png)
+![game page 3](https://github.com/hubalu/MazeGame/blob/master/image/5.png)
+![End page](https://github.com/hubalu/MazeGame/blob/master/image/6.png)
